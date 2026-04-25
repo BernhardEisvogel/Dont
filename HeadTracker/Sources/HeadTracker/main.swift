@@ -3,14 +3,21 @@ import AVFoundation
 import Vision
 import AppKit
 
+var currentSound: NSSound?
+
+func stopWav() {
+    currentSound?.stop()
+    currentSound = nil
+}
+
 func playWav(named fileName: String) {
     guard let url = Bundle.module.url(forResource: fileName, withExtension: "m4a") else {
         print("Sound not found")
         return
     }
 
-    let sound = NSSound(contentsOf: url, byReference: true)
-    sound?.play()
+    currentSound = NSSound(contentsOf: url, byReference: true)
+    currentSound?.play()
 }
 
 func pressSpace() {
@@ -109,7 +116,7 @@ class HeadTracker: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
         
         if pitchValue < -0.15 {
             triggerNotification(direction: "up")
-        }else if pitchValue > 0.15 {
+        }else if pitchValue > 0.3 {
             triggerNotification(direction: "down")
         }
     }
@@ -117,13 +124,18 @@ class HeadTracker: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
     func triggerNotification(direction: String) {
         let now = Date()
         // Play sound at most once every 5 seconds to avoid spam
-        if now.timeIntervalSince(lastNotificationTime) > 4.0 {
+        if now.timeIntervalSince(lastNotificationTime) > 0.7 {
             lastNotificationTime = now
             
             print("Head turned \(direction)")
             if direction == "down"{
                 // Play loud sounds natively
-                playWav(named: "dont_fall_asleep")
+                stopWav()
+                if (Int.random(in: 1...2) == 1){
+                    playWav(named: "mmmrmmm")
+                }else{
+                    playWav(named: "dont_fall_asleep")
+                }
                 // NSSound(named: "Glass")?.play()
                 // NSSound(named: "Basso")?.play()
             }
