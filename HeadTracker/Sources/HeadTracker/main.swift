@@ -1,6 +1,28 @@
 import Cocoa
 import AVFoundation
 import Vision
+import AppKit
+
+func playWav(named fileName: String) {
+    guard let url = Bundle.module.url(forResource: fileName, withExtension: "m4a") else {
+        print("Sound not found")
+        return
+    }
+
+    let sound = NSSound(contentsOf: url, byReference: true)
+    sound?.play()
+}
+
+func pressSpace() {
+    
+    // Maybe we can do something fun with this
+    let source = CGEventSource(stateID: .hidSystemState)
+    let keyDown = CGEvent(keyboardEventSource: source, virtualKey: 0x31, keyDown: true)
+    let keyUp   = CGEvent(keyboardEventSource: source, virtualKey: 0x31, keyDown: false)
+
+    keyDown?.post(tap: .cghidEventTap)
+    keyUp?.post(tap: .cghidEventTap)
+}
 
 
 class HeadTracker: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
@@ -95,14 +117,15 @@ class HeadTracker: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
     func triggerNotification(direction: String) {
         let now = Date()
         // Play sound at most once every 5 seconds to avoid spam
-        if now.timeIntervalSince(lastNotificationTime) > 1.0 {
+        if now.timeIntervalSince(lastNotificationTime) > 4.0 {
             lastNotificationTime = now
             
             print("Head turned \(direction)")
             if direction == "down"{
                 // Play loud sounds natively
-                NSSound(named: "Glass")?.play()
-                NSSound(named: "Basso")?.play()
+                playWav(named: "dont_fall_asleep")
+                // NSSound(named: "Glass")?.play()
+                // NSSound(named: "Basso")?.play()
             }
             // NSSound.beep()
         }
@@ -119,7 +142,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Create Status Bar Item to allow quitting the background app
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         if let button = statusItem?.button {
-            button.title = "👁📱" // Eye & Phone icon, or any generic icon
+            button.title = "👁👁"
         }
         
         let menu = NSMenu()
