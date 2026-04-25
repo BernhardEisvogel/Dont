@@ -14,9 +14,9 @@
             filePath = "Sources/HeadTracker/main.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
-            landmarkName = "triggerNotification(direction:)"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "captureOutput(_:didOutput:from:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

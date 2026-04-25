@@ -10,7 +10,12 @@ let package = Package(
         .executableTarget(
             name: "HeadTracker",
             dependencies: [],
-            path: "Sources/HeadTracker"
+            path: "Sources/HeadTracker",
+            resources: [
+                            .process("Resources")
+                        ]
         )
     ]
+    
+    
 )

@@ -3,7 +3,48 @@
 
   ],
   "copyCommands" : {
-
+    "/Users/bernhae45/Documents/EyesOpen/HeadTracker/.build/arm64-apple-macosx/debug/HeadTracker_HeadTracker.bundle/dont_fall_asleep.m4a" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/bernhae45/Documents/EyesOpen/HeadTracker/Sources/HeadTracker/Resources/dont_fall_asleep.m4a"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/bernhae45/Documents/EyesOpen/HeadTracker/.build/arm64-apple-macosx/debug/HeadTracker_HeadTracker.bundle/dont_fall_asleep.m4a"
+        }
+      ]
+    },
+    "/Users/bernhae45/Documents/EyesOpen/HeadTracker/.build/arm64-apple-macosx/debug/HeadTracker_HeadTracker.bundle/mmmrmmm.m4a" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/bernhae45/Documents/EyesOpen/HeadTracker/Sources/HeadTracker/Resources/mmmrmmm.m4a"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/bernhae45/Documents/EyesOpen/HeadTracker/.build/arm64-apple-macosx/debug/HeadTracker_HeadTracker.bundle/mmmrmmm.m4a"
+        }
+      ]
+    },
+    "/Users/bernhae45/Documents/EyesOpen/HeadTracker/.build/arm64-apple-macosx/debug/HeadTracker_HeadTracker.bundle/whatever_2.m4a" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/bernhae45/Documents/EyesOpen/HeadTracker/Sources/HeadTracker/Resources/whatever_2.m4a"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/bernhae45/Documents/EyesOpen/HeadTracker/.build/arm64-apple-macosx/debug/HeadTracker_HeadTracker.bundle/whatever_2.m4a"
+        }
+      ]
+    }
   },
   "explicitTargetDependencyImportCheckingMode" : {
     "none" : {
@@ -28,7 +69,15 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/bernhae45/Documents/EyesOpen/HeadTracker/.build/arm64-apple-macosx/debug/HeadTracker.build/DerivedSources/resource_bundle_accessor.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/bernhae45/Documents/EyesOpen/HeadTracker/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+        },
+        {
+          "kind" : "virtual",
+          "name" : "<HeadTracker-arm64-apple-macosx15.0-debug.module-resources>"
         },
         {
           "kind" : "file",
@@ -39,7 +88,8 @@
       "moduleName" : "HeadTracker",
       "moduleOutputPath" : "/Users/bernhae45/Documents/EyesOpen/HeadTracker/.build/arm64-apple-macosx/debug/Modules/HeadTracker.swiftmodule",
       "objects" : [
-        "/Users/bernhae45/Documents/EyesOpen/HeadTracker/.build/arm64-apple-macosx/debug/HeadTracker.build/main.swift.o"
+        "/Users/bernhae45/Documents/EyesOpen/HeadTracker/.build/arm64-apple-macosx/debug/HeadTracker.build/main.swift.o",
+        "/Users/bernhae45/Documents/EyesOpen/HeadTracker/.build/arm64-apple-macosx/debug/HeadTracker.build/resource_bundle_accessor.swift.o"
       ],
       "otherArguments" : [
         "-target",
@@ -85,12 +135,17 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/bernhae45/Documents/EyesOpen/HeadTracker/.build/arm64-apple-macosx/debug/HeadTracker.build/resource_bundle_accessor.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/bernhae45/Documents/EyesOpen/HeadTracker/.build/arm64-apple-macosx/debug/Modules/HeadTracker.swiftmodule"
         }
       ],
       "prepareForIndexing" : false,
       "sources" : [
-        "/Users/bernhae45/Documents/EyesOpen/HeadTracker/Sources/HeadTracker/main.swift"
+        "/Users/bernhae45/Documents/EyesOpen/HeadTracker/Sources/HeadTracker/main.swift",
+        "/Users/bernhae45/Documents/EyesOpen/HeadTracker/.build/arm64-apple-macosx/debug/HeadTracker.build/DerivedSources/resource_bundle_accessor.swift"
       ],
       "tempsPath" : "/Users/bernhae45/Documents/EyesOpen/HeadTracker/.build/arm64-apple-macosx/debug/HeadTracker.build",
       "wholeModuleOptimization" : false
@@ -109,6 +164,7 @@
       "-incremental",
       "-c",
       "/Users/bernhae45/Documents/EyesOpen/HeadTracker/Sources/HeadTracker/main.swift",
+      "/Users/bernhae45/Documents/EyesOpen/HeadTracker/.build/arm64-apple-macosx/debug/HeadTracker.build/DerivedSources/resource_bundle_accessor.swift",
       "-I",
       "/Users/bernhae45/Documents/EyesOpen/HeadTracker/.build/arm64-apple-macosx/debug/Modules",
       "-target",
@@ -188,6 +244,10 @@
         {
           "kind" : "file",
           "name" : "/Users/bernhae45/Documents/EyesOpen/HeadTracker/Sources/HeadTracker/main.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bernhae45/Documents/EyesOpen/HeadTracker/.build/arm64-apple-macosx/debug/HeadTracker.build/DerivedSources/resource_bundle_accessor.swift"
         }
       ],
       "outputFilePath" : "/Users/bernhae45/Documents/EyesOpen/HeadTracker/.build/arm64-apple-macosx/debug/HeadTracker.build/sources"
@@ -202,6 +262,10 @@
         {
           "kind" : "file",
           "name" : "/Users/bernhae45/Documents/EyesOpen/HeadTracker/.build/arm64-apple-macosx/debug/HeadTracker.build/main.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/bernhae45/Documents/EyesOpen/HeadTracker/.build/arm64-apple-macosx/debug/HeadTracker.build/resource_bundle_accessor.swift.o"
         }
       ],
       "outputFilePath" : "/Users/bernhae45/Documents/EyesOpen/HeadTracker/.build/arm64-apple-macosx/debug/HeadTracker.product/Objects.LinkFileList"
