@@ -3,21 +3,29 @@ import AppKit
 var currentSound: NSSound?
 
 func stopWav() {
+    // Stop the currently playing audio player
     currentSound?.stop()
     currentSound = nil
 }
 
-func playWav(named fileName: String) {
-    guard let url = Bundle.main.url(forResource: fileName, withExtension: "m4a") else {
-        print("Sound not found: \(fileName)")
-        return
-    }
+var timeNextSoundNotification = Date.distantPast // I dont wan tstuff to be said at the same time
 
-    currentSound = NSSound(contentsOf: url, byReference: true)
-    currentSound?.play()
+func playWav(named fileName: String) {
+    let now = Date()
+    if (now>timeNextSoundNotification){
+        guard let url = Bundle.main.url(forResource: fileName, withExtension: "m4a") else {
+            print("Sound not found: \(fileName)")
+            return
+        }
+        stopWav()
+        currentSound = NSSound(contentsOf: url, byReference: true)
+        currentSound?.play()
+        timeNextSoundNotification = now.advanced(by: currentSound?.duration ?? 0)
+    }
 }
 
 func pressSpace() {
+    // Maybe we can do somehting fun with this later
     let source = CGEventSource(stateID: .hidSystemState)
     let keyDown = CGEvent(keyboardEventSource: source, virtualKey: 0x31, keyDown: true)
     let keyUp   = CGEvent(keyboardEventSource: source, virtualKey: 0x31, keyDown: false)
