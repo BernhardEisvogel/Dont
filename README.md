@@ -1,6 +1,5 @@
 # 👁 EyesOpen
 
-![EyesOpen Logo](eyes_open_logo_1777201520579.png)
 
 **EyesOpen** is a sophisticated macOS background application designed to enhance focus and break bad habits. By leveraging real-time computer vision, it monitors your posture and hand movements to prevent you from touching your face, biting your nails, or falling asleep at your desk.
 
