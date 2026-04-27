@@ -1,3 +1,6 @@
+![Logo](Dont/Dont/Assets.xcassets/AppIcon.appiconset
+/1024-mac.png)
+
 # Introduction
 This is a macOS background app that keeps you from touching your face, biting your nails/popping pimples (essentially moving your hands close to your face) while working. It also keeps you from falling asleep. 
 
