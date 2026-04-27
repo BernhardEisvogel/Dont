@@ -11,9 +11,6 @@
 		A1B2C3D4E5F60000000051 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F60000000041 /* AppDelegate.swift */; };
 		A1B2C3D4E5F60000000052 /* HeadTrackerClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F60000000042 /* HeadTrackerClass.swift */; };
 		A1B2C3D4E5F60000000053 /* SoundUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F60000000043 /* SoundUtils.swift */; };
-		A1B2C3D4E5F60000000054 /* dont_fall_asleep.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F60000000046 /* dont_fall_asleep.m4a */; };
-		A1B2C3D4E5F60000000055 /* dont_touch_your_face.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F60000000047 /* dont_touch_your_face.m4a */; };
-		A1B2C3D4E5F60000000056 /* mmmrmmm.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F60000000048 /* mmmrmmm.m4a */; };
 		A1B2C3D4E5F60000000063 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F60000000060 /* Cocoa.framework */; };
 		A1B2C3D4E5F60000000064 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F60000000061 /* AVFoundation.framework */; };
 		A1B2C3D4E5F60000000065 /* Vision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F60000000062 /* Vision.framework */; };
@@ -28,9 +25,6 @@
 		A1B2C3D4E5F60000000043 /* SoundUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundUtils.swift; sourceTree = "<group>"; };
 		A1B2C3D4E5F60000000044 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1B2C3D4E5F60000000045 /* HeadTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HeadTracker.entitlements; sourceTree = "<group>"; };
-		A1B2C3D4E5F60000000046 /* dont_fall_asleep.m4a */ = {isa = PBXFileReference; lastKnownFileType = audio.m4a; path = dont_fall_asleep.m4a; sourceTree = "<group>"; };
-		A1B2C3D4E5F60000000047 /* dont_touch_your_face.m4a */ = {isa = PBXFileReference; lastKnownFileType = audio.m4a; path = dont_touch_your_face.m4a; sourceTree = "<group>"; };
-		A1B2C3D4E5F60000000048 /* mmmrmmm.m4a */ = {isa = PBXFileReference; lastKnownFileType = audio.m4a; path = mmmrmmm.m4a; sourceTree = "<group>"; };
 		A1B2C3D4E5F60000000060 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		A1B2C3D4E5F60000000061 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A1B2C3D4E5F60000000062 /* Vision.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Vision.framework; path = System/Library/Frameworks/Vision.framework; sourceTree = SDKROOT; };
@@ -70,20 +64,9 @@
 				A1B2C3D4E5F60000000041 /* AppDelegate.swift */,
 				A1B2C3D4E5F60000000042 /* HeadTrackerClass.swift */,
 				A1B2C3D4E5F60000000043 /* SoundUtils.swift */,
-				A1B2C3D4E5F60000000004 /* Resources */,
 			);
 			name = Sources;
 			path = Sources/HeadTracker;
-			sourceTree = "<group>";
-		};
-		A1B2C3D4E5F60000000004 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				A1B2C3D4E5F60000000046 /* dont_fall_asleep.m4a */,
-				A1B2C3D4E5F60000000047 /* dont_touch_your_face.m4a */,
-				A1B2C3D4E5F60000000048 /* mmmrmmm.m4a */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		A1B2C3D4E5F60000000005 /* Products */ = {
@@ -163,9 +146,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1B2C3D4E5F60000000070 /* Assets.xcassets in Resources */,
-				A1B2C3D4E5F60000000054 /* dont_fall_asleep.m4a in Resources */,
-				A1B2C3D4E5F60000000055 /* dont_touch_your_face.m4a in Resources */,
-				A1B2C3D4E5F60000000056 /* mmmrmmm.m4a in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
