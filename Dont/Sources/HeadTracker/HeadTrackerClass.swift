@@ -142,7 +142,7 @@ class HeadTracker: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
     func triggerHandFaceNotification() {
         // This will be triggered when the user toiches their face
         let now = Date()
-        if  UserDefaults.standard.bool(forKey: touchFaceKey){
+        if  !UserDefaults.standard.bool(forKey: touchFaceKey){
             lastHandFaceNotificationTime = now
             print("Hand touching face detected!")
             playWav(named: "applepay", ext: "mp3")
@@ -151,8 +151,8 @@ class HeadTracker: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
 
     func triggerHeadDownNotification(direction: String) {
         if direction == "down" {
-            print("Falling asleep detected!")
-            if  UserDefaults.standard.bool(forKey: fallAsleepKey){
+            if  !UserDefaults.standard.bool(forKey: fallAsleepKey){
+                print("Falling asleep detected!")
                 if Int.random(in: 1...2) == 1 {
                     playWav(named: "mmmrmmm")
                 } else {

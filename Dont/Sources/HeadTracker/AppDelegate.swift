@@ -30,10 +30,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         toggleTouchFace.target = self
 
         let isEnabledSleep = UserDefaults.standard.bool(forKey: fallAsleepKey)
-        toggleFallAsleep.state = isEnabledSleep ? .on : .off
+        toggleFallAsleep.state = isEnabledSleep ? .off : .on
 
         let isEnabledFace = UserDefaults.standard.bool(forKey: touchFaceKey)
-        toggleTouchFace.state = isEnabledFace ? .on : .off
+        toggleTouchFace.state = isEnabledFace ? .off : .on
        
        
        menu.addItem(toggleTouchFace)
@@ -52,13 +52,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let newValue = (sender.state != .on)
         sender.state = newValue ? .on : .off
         
-        UserDefaults.standard.set(newValue, forKey: fallAsleepKey)
+        UserDefaults.standard.set(!newValue, forKey: fallAsleepKey)
     }
     
     @objc func toggleTouchFaceTracking(_ sender: NSMenuItem) {
         let newValue = (sender.state != .on)
         sender.state = newValue ? .on : .off
         
-        UserDefaults.standard.set(newValue, forKey: touchFaceKey)
+        UserDefaults.standard.set(!newValue, forKey: touchFaceKey)
     }
 }
